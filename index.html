@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no,user-scalable=no,minimal-ui">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="black">
+<title>We are all Saints - An AR experiment using computer vision.</title>
+<style>
+  html, body {
+    padding: 0;
+    margin: 0;
+  }
+
+  section, video {
+    width: 480px;
+    height: 360px;
+  }
+
+  video {
+    position: absolute;
+    object-fit: fill;
+  }
+</style>
+<script src="js/lib/aframe.js"></script>
+<script src="js/lib/objectdetect/objectdetect.js"></script>
+<script src="js/lib/objectdetect/objectdetect.frontalface_alt.js"></script>
+<script src="js/all-saints-ar.js"></script>
+</head>
+<body>
+<section>
+  <a-scene all-saints-ar
+           embedded
+           vr-mode-ui="enabled:false"
+           keyboard-shortcuts="enterVR:false;resetSensor:false">
+    <a-camera userHeight="0"
+              near="0.5"
+              far="2.5"
+              look-controls-enabled="false"
+              wasd-controls-enabled="false"></a-camera>
+  </a-scene>
+</section>
+</body>
+</html>
